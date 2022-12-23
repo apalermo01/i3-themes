@@ -1,0 +1,27 @@
+exec --no-startup-id xset dpms 300
+exec --no-startup-id xautolock -time 5 -locker cbonsai --life 40 --multiplier 5 --time 5 --screensaver
+
+### polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+### background
+exec_always feh --bg-fill $HOME/Pictures/wallpapers/wallhaven-eymker.jpg
+
+### gaps
+gaps inner 8
+gaps outer -4
+smart_gaps on
+
+### colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #51a483 #51a843 #073763 #2e9ef4   #285577
+client.focused_inactive #cacaca #51a483 #073763 #484e50   #5f676a
+client.unfocused        #cacaca #8b8b8b #888888 #292d2e   #8b8b8b
+client.urgent           #2f343a #900000 #073763 #900000   #900000
+client.placeholder      #000000 #0c0c0c #073763 #000000   #0c0c0c
+
+client.background       #ffffff
+
+# transparency
+exec killall compton
+exec_always compton --config ~/.config/compton.conf

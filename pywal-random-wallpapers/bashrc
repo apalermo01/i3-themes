@@ -1,0 +1,2 @@
+wal -n -i $(cat ~/.current_background) > /dev/null
+neofetch
