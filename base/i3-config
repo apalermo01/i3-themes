@@ -163,3 +163,5 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 focus_follows_mouse no
+
+for window [class="zoom"] floating enable
