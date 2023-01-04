@@ -11,6 +11,8 @@ Plug 'nvie/vim-flake8'
 Plug 'nocksock/python-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdo    wn', 'vim-plug']}
+
 call plug#end()
 let mapleader = "," 
 
@@ -37,7 +39,7 @@ colorscheme gruvbox
 set bg=dark
 noremap oo  o<Esc>k
 noremap OO O<ESC>j
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 
 "nerdtree
 " exit vim in NERDTree is the only window remaining
@@ -74,4 +76,4 @@ map <leader>ss :setlocal spell!<cr>
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 
-
+let g:mkdp_command_for_global = 1

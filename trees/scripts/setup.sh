@@ -1,6 +1,9 @@
 # copy wallpaper
-cp ./trees/wallhaven-eymker.jpg ~/Pictures/wallpapers/wallhaven-eymker.jpg
+#cp ./trees/wallhaven-eymker.jpg ~/Pictures/wallpapers/wallhaven-eymker.jpg
+cp ./trees/trees.jpg ~/Pictures/wallpapers/trees.jpg
+
 THEMENAME=trees
+
 # bashrc
 cat ./$1/bashrc >> ~/.bashrc
 
@@ -28,3 +31,6 @@ fi
 cp ./$1/polybar.ini ~/.config/polybar/config.ini 
 cp ./$1/scripts/polybar_launch.sh ~/.config/polybar/launch.sh
 
+### dependencies
+sudo apt-get install xterm
+sudo apt-get install suckless-tools

@@ -6,3 +6,8 @@ fi
 cp ./base/scripts/rofifinder.sh ~/.config/i3/bin/rofifinder.sh
 cp ./base/scripts/left_ext_monitor.sh ~/left_ext_monitor.sh
 cp ./base/scripts/right_ext_monitor.sh ~/right_ext_monitor.sh 
+
+# install cargo
+
+# install alacritty
+cargo install alacritty

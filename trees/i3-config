@@ -1,27 +1,65 @@
+hide_edge_borders both
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:JetBrainsMono 10
+
 exec --no-startup-id xset dpms 300
 exec --no-startup-id xautolock -time 5 -locker cbonsai --life 40 --multiplier 5 --time 5 --screensaver
+
+# start a terminal
+bindsym $mod+Return exec tabbed -c xterm -into &
 
 ### polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 ### background
-exec_always feh --bg-fill $HOME/Pictures/wallpapers/wallhaven-eymker.jpg
+exec_always feh --bg-fill $HOME/Pictures/wallpapers/trees.jpg
 
 ### gaps
 gaps inner 8
 gaps outer -4
 smart_gaps on
+### colors - taken from .Xresource
+set_from_resource $foreground foreground 
+set_from_resource $background background 
+set_from_resource $color0 color0 
+set_from_resource $color1 color1 
+set_from_resource $color2 color2  
+set_from_resource $color3 color3 
+set_from_resource $color4 color4 
+set_from_resource $color5 color5 
+set_from_resource $color6 color6 
+set_from_resource $color7 color7
+set_from_resource $color8 color8
+set_from_resource $color9 color9
+set_from_resource $color10 color10
+set_from_resource $color11 color11
+set_from_resource $color12 color12
+set_from_resource $color13 color13
+set_from_resource $color14 color14
+set_from_resource $color15 color15
+set $red #d75f5f
+
+# class                 border      backgr      text        indicator       child_border
+client.focused          $foreground $foreground $color0     $background     $foreground
+client.focused_inactive $foreground $foreground $color0     $background     $foreground
+client.unfocused        $background $background $color1     $background     $background 
+client.urgent           $red        $red        $color0     $red            $red
+client.placeholder      $red        $background $color2     $color2             $color2
 
 ### colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #51a483 #51a843 #073763 #2e9ef4   #285577
-client.focused_inactive #cacaca #51a483 #073763 #484e50   #5f676a
-client.unfocused        #cacaca #8b8b8b #888888 #292d2e   #8b8b8b
-client.urgent           #2f343a #900000 #073763 #900000   #900000
-client.placeholder      #000000 #0c0c0c #073763 #000000   #0c0c0c
+# client.focused          #51a483 #51a843 #073763 #2e9ef4   #285577
+# client.focused_inactive #cacaca #51a483 #073763 #484e50   #5f676a
+# client.unfocused        #cacaca #8b8b8b #888888 #292d2e   #8b8b8b
+# client.urgent           #2f343a #900000 #073763 #900000   #900000
+# client.placeholder      #000000 #0c0c0c #073763 #000000   #0c0c0c
 
 client.background       #ffffff
 
 # transparency
 exec killall compton
 exec_always compton --config ~/.config/compton.conf
+
+# kill titles and bordedr
+for_window [class="^.*"] border pixel 0
