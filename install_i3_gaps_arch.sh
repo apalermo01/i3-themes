@@ -5,7 +5,7 @@
 # ensure that i3 is not installed
 sudo pacman -Scc i3
 
-sudp pacman -S meson
+sudo pacman -S meson
 
 # install dependencies
 sudo pacman -S libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \

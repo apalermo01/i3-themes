@@ -88,12 +88,23 @@ if [ -d ~/.config/polybar ]
 then
 	rm -r ~/.config/polybar
 fi
+
 ### copy files ################################################################
 cp ./base/i3-config ~/.config/i3/config
 cp ./base/bashrc ~/.bashrc
 cp ./base/vimrc ~/.vimrc
 cp ./base/Xresources ~/.Xresources
 
+### echo os-specific bindsyms ################################################
+case $2 in
+	arch)
+		echo "bindsym $mod+b exec brave" >> ~/.config/i3/config
+		;;
+	*) # expect this to be any debian-based distro
+		echo "bindsym $mod+b exec brave-browser" >> ~/.config/i3/config
+	    	
+		;;
+esac
 # copies base configs into the right directories
 ./base/scripts/setup.sh
 
