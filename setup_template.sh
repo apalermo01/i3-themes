@@ -98,11 +98,12 @@ cp ./base/Xresources ~/.Xresources
 ### echo os-specific bindsyms ################################################
 case $2 in
 	arch)
-		echo "bindsym $mod+b exec brave" >> ~/.config/i3/config
+		echo "bindsym \$mod+b exec brave" >> ~/.config/i3/config
+		#echo "bindsym \$mod+Return exec konsole" >> ~/.config/i3/config
 		;;
 	*) # expect this to be any debian-based distro
-		echo "bindsym $mod+b exec brave-browser" >> ~/.config/i3/config
-	    	
+		echo "bindsym \$mod+b exec brave-browser" >> ~/.config/i3/config
+	    #echo "bindsym \$mod+Return exec gnome-terminal" >> ~/.config/i3/config
 		;;
 esac
 # copies base configs into the right directories
