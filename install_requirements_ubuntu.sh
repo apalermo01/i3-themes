@@ -1,1 +1,1 @@
-apt-get install neofetch i3lock
+apt-get install neofetch i3lock onefetch

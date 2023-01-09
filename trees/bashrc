@@ -1,2 +1,10 @@
 cbonsai -p
-wal -i ~/Pictures/wallpapers/trees.jpg > /dev/null
+wal -n -e -i  ~/Pictures/wallpapers/trees.jpg > /dev/null
+
+function show_onefetch() {
+     if [ -d .git ]; then
+         onefetch
+     fi
+}
+function cd() { builtin cd "$@" && show_onefetch; }
+
