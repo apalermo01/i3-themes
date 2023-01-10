@@ -16,4 +16,4 @@ cp ./$1/scripts/set_wp.sh ~/.set_wp.sh
 cat ./$1/i3-config >> ~/.config/i3/config
 
 # compton
-cp ./$1/compton.conf ~/.config/compton.conf
+cp ./$1/picom.conf ~/.config/picom.conf

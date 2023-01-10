@@ -3,7 +3,7 @@
 exec_always bash ~/.set_wp.sh
 exec wal -n -i $(cat ~/.current_background) > /dev/null
 exec xrdb -merge ~/.Xresources
-exec killall compton
+exec killall picom
 
 ### statusbar
 bar {
@@ -15,7 +15,7 @@ bar {
 
 focus_follows_mouse no
 exec bash ~/left_ext_monitor.sh
-exec_always compton --config ~/.config/compton.conf 
+exec_always picom --config ~/.config/picom.conf 
 
 ### gaps
 gaps inner 15

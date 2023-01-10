@@ -21,7 +21,7 @@ cp ./$1/blue_in_green.vim ~/.vim/colors/blue_in_green.vim
 cat ./$1/vimrc >> ~/.vimrc
 
 # compton
-cp ./$1/compton.conf ~/.config/compton.conf
+cp ./$1/picom.conf ~/.config/picom.conf
 
 # polybar
 if [ ! -d ~/.config/polybar ]
@@ -31,6 +31,3 @@ fi
 cp ./$1/polybar.ini ~/.config/polybar/config.ini 
 cp ./$1/scripts/polybar_launch.sh ~/.config/polybar/launch.sh
 
-### dependencies
-sudo apt-get install xterm
-sudo apt-get install suckless-tools
