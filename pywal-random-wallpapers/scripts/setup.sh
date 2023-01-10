@@ -21,5 +21,5 @@ cp ./$1/picom.conf ~/.config/picom.conf
 # download some wallpapers
 if [ ! -d ~/Pictures/wallpapers/ ]; then
 	mkdir ~/Pictures/wallpapers
-	cp ../backgrounds/* ~/Pictures/wallpapers
+	cp ./pywal-random-wallpapers/backgrounds/* ~/Pictures/wallpapers
 fi
