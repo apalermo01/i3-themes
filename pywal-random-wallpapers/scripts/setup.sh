@@ -19,7 +19,7 @@ cat ./$1/i3-config >> ~/.config/i3/config
 cp ./$1/picom.conf ~/.config/picom.conf
 
 # download some wallpapers
-if [ ! -d ~/Picutres/wallpapers/ ]; then
-	mkdir ~/Picutres/wallpapers
+if [ ! -d ~/Pictures/wallpapers/ ]; then
+	mkdir ~/Pictures/wallpapers
 	cp ../backgrounds/* ~/Pictures/wallpapers
 fi
