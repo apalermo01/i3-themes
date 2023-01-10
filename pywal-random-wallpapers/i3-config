@@ -4,7 +4,6 @@ exec_always bash ~/.set_wp.sh
 exec wal -n -i $(cat ~/.current_background) > /dev/null
 exec xrdb -merge ~/.Xresources
 exec killall compton
-bindsym $mod+Return exec tabbed -c xterm -into &
 
 ### statusbar
 bar {
@@ -22,27 +21,6 @@ exec_always compton --config ~/.config/compton.conf
 gaps inner 15
 gaps outer -4
 smart_gaps on
-
-### colors - taken from .Xresource
-# set_from_resource $foreground foreground #4c7899
-# set_from_resource $background background #333333
-# set_from_resource $color0 color0 #ffffff
-# set_from_resource $color1 color1 #888888
-# set_from_resource $color2 color2 #000000 
-# set_from_resource $color3 color3 #000000
-# set_from_resource $color4 color4 #000000
-# set_from_resource $color5 color5 #000000
-# set_from_resource $color6 color6 #000000
-# set_from_resource $color7 color7
-# set_from_resource $color8 color8
-# set_from_resource $color9 color9
-# set_from_resource $color10 color10
-# set_from_resource $color11 color11
-# set_from_resource $color12 color12
-# set_from_resource $color13 color13
-# set_from_resource $color14 color14
-# set_from_resource $color15 color15
-# set $red #d75f5f
 
 ### colors - taken from .Xresource
 set_from_resource $foreground foreground 
@@ -64,6 +42,7 @@ set_from_resource $color13 color13
 set_from_resource $color14 color14
 set_from_resource $color15 color15
 set $red #d75f5f
+
 # class                 border		backgr		text		indicator		child_border
 client.focused          $foreground	$foreground	$color0		$background		$foreground
 client.focused_inactive $foreground	$foreground	$color0		$background		$foreground

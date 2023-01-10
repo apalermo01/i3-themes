@@ -1,14 +1,6 @@
 ### config for i3 (NOTE: requires i3-gaps to work)
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:monospace 10
-
-# custom bindsyms
-bindsym $mod+f exec firefox
-bindsym $mod+b exec brave-browser
-bindsym $mod+Ctrl+f exec ~/.config/i3/bin/rofifinder.sh
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -162,3 +154,12 @@ bindsym $mod+r mode "resize"
 focus_follows_mouse no
 
 for_window [class="zoom"] floating enable
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 10
+
+# custom bindsyms
+bindsym $mod+f exec firefox
+bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Ctrl+f exec ~/.config/i1/bin/rofifinder.sh
