@@ -6,9 +6,6 @@ font pango:JetBrainsMono 10
 exec --no-startup-id xset dpms 300
 exec --no-startup-id xautolock -time 5 -locker cbonsai --life 40 --multiplier 5 --time 5 --screensaver
 
-# start a terminal
-bindsym $mod+Return exec tabbed -c xterm -into &
-
 ### polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -54,8 +51,8 @@ client.placeholder      $red        $background $color2     $color2             
 client.background       #ffffff
 
 # transparency
-exec killall compton
-exec_always compton --config ~/.config/compton.conf
+exec killall picom
+exec_always picom --config ~/.config/picom.conf
 
 # kill titles and bordedr
 for_window [class="^.*"] border pixel 0

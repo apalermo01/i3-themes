@@ -5,7 +5,6 @@
 # ensure that i3 is not installed
 sudo apt remove i3
 
-sudp apt install meson
 
 # install dependencies
 sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
@@ -14,6 +13,8 @@ libstartup-notification0-dev libxcb-randr0-dev \
 libev-dev libxcb-cursor-dev libxcb-xinerama0-dev \
 libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev \
 autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev
+
+sudp apt install meson
 
 mkdir /tmp/build
 cd /tmp/build
