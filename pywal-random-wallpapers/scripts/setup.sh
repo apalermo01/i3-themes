@@ -19,5 +19,7 @@ cat ./$1/i3-config >> ~/.config/i3/config
 cp ./$1/picom.conf ~/.config/picom.conf
 
 # download some wallpapers
+if [ ! -d ~/Pictures/wallpapers/ ]; then 
 mkdir ~/Pictures/wallpapers
+fi
 cp  ./pywal-random-wallpapers/backgrounds/* ~/Pictures/wallpapers
