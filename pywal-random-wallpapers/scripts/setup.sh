@@ -15,5 +15,11 @@ cp ./$1/scripts/set_wp.sh ~/.set_wp.sh
 # i3 config
 cat ./$1/i3-config >> ~/.config/i3/config
 
-# compton
+# picom
 cp ./$1/picom.conf ~/.config/picom.conf
+
+# download some wallpapers
+if [ ! -d ~/Picutres/wallpapers/ ]; then
+	mkdir ~/Picutres/wallpapers
+	cp ../backgrounds/* ~/Pictures/wallpapers
+fi
