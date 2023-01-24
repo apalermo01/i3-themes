@@ -162,4 +162,4 @@ font pango:monospace 10
 # custom bindsyms
 bindsym $mod+f exec firefox
 bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Ctrl+f exec ~/.config/i1/bin/rofifinder.sh
+bindsym $mod+Ctrl+f exec ~/.config/i3/bin/rofifinder.sh

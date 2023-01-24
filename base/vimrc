@@ -42,6 +42,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 let mapleader = "," 
 
@@ -63,6 +66,7 @@ set incsearch
 set showcmd
 set showmode
 set wildmenu
+
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 colorscheme gruvbox
 set bg=dark
@@ -137,3 +141,6 @@ map <leader>t<leader> :tabnext
 map <leader>tm :tabmove
 map <leader>tc :tabclose<c>
 map <leader>to :tabonly<cr>
+
+" airline statusline
+
