@@ -119,5 +119,3 @@ fi
 source /home/alex/anaconda3/bin/activate
 . "$HOME/.cargo/env"
 
-#neofetch
-#wal -i $(gsettings get org.gnome.desktop.background picture-uri) > /dev/null
