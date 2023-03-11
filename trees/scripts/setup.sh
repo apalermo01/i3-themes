@@ -8,7 +8,7 @@ THEMENAME=trees
 cat ./$1/bashrc >> ~/.bashrc
 
 # i3 config
-cat ./$1/i3-config >> ~/.config/i3/config
+#cat ./$1/i3-config >> ~/.config/i3/config
 
 # vimrc
 if [ ! -f ./$1/blue_in_green.vim ]

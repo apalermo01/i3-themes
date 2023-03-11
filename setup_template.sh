@@ -2,6 +2,33 @@
 # setup script for replacing themes
 # adapted from https://github.com/Kthulu120/i3wm-themes/blob/master/scripts/apply_theme.sh
 
+
+cat_i3config() {
+	echo "running i3 config for theme $1"
+	
+	if [ -f ./$1/i3-config ]
+	then
+		cat ./$1/i3-config >> ~/.config/i3/config	
+	fi
+}
+
+cat_bashconfig() {
+	
+	if [ -f ./$1/bashrc ]
+	then
+		cat ./$1/bashrc >> ~/.bashrc
+	fi
+}
+
+cat_vimrc() {
+	if [ -f ./$1/*.vim ]
+	then
+		echo "found a vim file (need to fill this out"
+
+	fi
+}
+### intro ####################################################################
+
 echo "Setting up template $1"
 
 if [ -d ./$1/ ]
@@ -13,6 +40,7 @@ else
 fi
 
 ### backup ####################################################################
+
 read -p "Backup current theme? [y, n]" input
 case $input in
 	y|Y)
@@ -90,9 +118,9 @@ then
 fi
 
 ### copy files ################################################################
-cp ./base/i3-config ~/.config/i3/config
-cp ./base/bashrc ~/.bashrc
-cp ./base/vimrc ~/.vimrc
+cp ./base/i3.template ~/.config/i3/config
+cp ./base/bashrc.template  ~/.bashrc
+cp ./base/vimrc.template  ~/.vimrc
 cp ./base/Xresources ~/.Xresources
 
 ### echo os-specific bindsyms ################################################
@@ -106,11 +134,13 @@ case $2 in
 	    #echo "bindsym \$mod+Return exec gnome-terminal" >> ~/.config/i3/config
 		;;
 esac
-# copies base configs into the right directories
+
+### copy some utility scripts
 ./base/scripts/setup.sh
 
 # sets up theme specific configs, appends the contents of configs in the theme
 # specific folder to the contents of the base configs
+cat_i3config $1
 ./$1/scripts/setup.sh $1
 
 # make file for environment variables
